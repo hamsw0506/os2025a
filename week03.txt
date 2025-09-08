@@ -1,4 +1,6 @@
 리눅스
-
+echo
+rm
+history
 
 깃
