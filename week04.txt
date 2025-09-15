@@ -1,5 +1,5 @@
 리눅스 명령어
-vi filename
+vi 파일명 (vi filename)
 
 git 명령어
 git commit -amend -m "수정할 commit 메세지"
