@@ -9,3 +9,4 @@ git reset --hard HEAD
 git reset --hard HEAD~숫자
 git fetch
 git pull
+git push -f origin main
