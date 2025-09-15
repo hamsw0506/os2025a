@@ -1,3 +1,6 @@
+리눅스 명령어
+
+
 git 명령어
 git commit -amend -m "수정할 commit 메세지"
 git reset --hard
