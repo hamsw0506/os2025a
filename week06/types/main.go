@@ -2,10 +2,12 @@ package main
 
 import (
 	"fmt"
-	"reflect"
 )
 
 func main() {
-	var name bool
-	fmt.Println(name, reflect.TypeOf(name))
+	// var 64f float64
+	// fmt.Println(name, reflect.TypeOf(name))
+
+	totalPrice := 500
+	fmt.Println(totalPrice)
 }
