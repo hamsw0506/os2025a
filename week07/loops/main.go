@@ -5,17 +5,32 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"time"
+	"strconv"
+	"strings"
 )
 
 func main() {
-	var now time.Time = time.Now()
-	var month time.Month = now.Month() // month := now.Month()
-	fmt.Println(month)
+	//var fmt string = "inha"
+	// var int int = 7
+	// fmt.Println(int)
 
 	r := bufio.NewReader(os.Stdin)
 	i, err := r.ReadString('\n')
 	//fmt.Println(err)
-	log.Fatal(err) //repot the error and exit program
-	fmt.Println(i)
+	if err != nil {
+		log.Fatal(err) //repot the error and exit program
+	}
+
+	i = strings.TrimSpace(i)
+	score, err := strconv.ParseFloat(i, 64)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	if score >= 60 {
+		fmt.Println("pass")
+	} else {
+		fmt.Println("fail")
+	}
+	fmt.Println(score)
 }
