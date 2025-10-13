@@ -2,14 +2,16 @@ package main
 
 import (
 	"fmt"
-	"reflect"
+	"strings"
+	"time"
 )
 
 func main() {
-	var length float64 = 3.2
-	var width int = 2
-	fmt.Println("Area is", int(length)*width)
-	fmt.Println("length > width?", int(length) > width)
-	fmt.Println("con", reflect.TypeOf(int(length)))
-	fmt.Println("origin", reflect.TypeOf(length))
+	var now time.Time = time.Now()
+	var day int = now.Day()
+	fmt.Println(day)
+	univ := "Go Inha$"
+	changer := strings.NewReplacer("$", "!")
+	changed := changer.Replace(univ)
+	fmt.Println(changed)
 }
