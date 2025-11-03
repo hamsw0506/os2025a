@@ -5,12 +5,12 @@ import (
 )
 
 func main() {
-	arrayBool := [3]bool{true, false, true}
-	arrayInt := [2]int{-9, 11}
-	for i := 0; i < len(arrayBool); i++ {
-		fmt.Println(i, arrayBool[i])
-		//fmt.Println(i, arrayInt[i])	//runtime error
+	// 	arrayInt := [3]int{-9, 11, 7}
+	// 	for i := 0; i < len(arrayInt); i++ {
+	// 		fmt.Println(i, arrayInt[i])
+	// 	}
+	numbers := [3]int{-9, 11, 7}
+	for i, number := range numbers {
+		fmt.Println(i, number)
 	}
-	fmt.Printf("%#v\n", arrayInt)
-	fmt.Printf("%#v\n", arrayBool)
 }
