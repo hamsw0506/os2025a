@@ -2,17 +2,12 @@ package main
 
 import (
 	"fmt"
-	"os"
 )
 
 func main() {
-	file, err := os.Open("test.txt")
-	if err != nil {
-		fmt.Println("파일 오픈 실패 : ", err)
-		return
-	}
-
-	defer file.Close()
-
-	fmt.Println("파일 오픈 실행")
+	//Last in First Out, 스택 구조
+	defer fmt.Println("1st defer")
+	defer fmt.Println("2nd defer")
+	defer fmt.Println("3rd defer")
+	fmt.Println("Main logic")
 }
